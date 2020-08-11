@@ -6,7 +6,7 @@ import Table from "./components/Table";
 
 function App() {
 
-  const [people, setPeople] = useState([]);
+  const [peopleData, setPeople] = useState([]);
 
   const loadPeople = () => {
     axios.get(
@@ -21,11 +21,11 @@ function App() {
   return (
     <div className="container">
       <SearchInput />
-      <Table />
+      <Table peopleData = {peopleData} />
       <h1>Page Deployed, Success!</h1>
       <button onClick={loadPeople}>Click me!</button>
-      {people.map((people) => {
-        console.log(people);
+      {peopleData.map((peopleData) => {
+        console.log(peopleData);
       })}
     </div>
   
