@@ -10,7 +10,7 @@ function App() {
 
   const loadPeople = () => {
     axios.get(
-      "https://randomuser.me/api/?results=0&nat=us"
+      "https://randomuser.me/api/?results=5&nat=us"
     ).then((res) => {
       console.log(res.data.results);
       const peopleData = res.data.results
